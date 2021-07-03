@@ -18,10 +18,6 @@ function EstateList(props) {
 
     console.log(estateList)
 
-    
-
-    
-
     return (
       <div className="estateList">
         {estateList.map((estate, i) => (
