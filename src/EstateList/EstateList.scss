@@ -1,0 +1,19 @@
+.estateList {
+    display: flex;
+    flex-direction: row;
+
+    .card {
+        width: 10%;
+
+        img {
+            width: 95%;
+        }
+
+        .name {
+            width: 95%;
+            margin-top: 0;
+            font-size: 0.7rem;
+            text-align: left;
+        }
+    }
+}
