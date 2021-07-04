@@ -3,13 +3,11 @@ import "./MainCard.scss";
 
 function MainCardB(props) {
   const { images, name, prize_czk, locality, building_area, land_area } = props.estateB;
-
-  console.log(props.estateB.images);
   
 
   return (
     <div className="mainCard">
-      <img src={images} alt={name} className="mainImg"/> 
+      <img src={images[0]} alt={name} className="mainImg"/> 
       <p className="mainCardTitle">{name}</p>
       <div className="mainCardInfo">
         <h5>Price</h5>
