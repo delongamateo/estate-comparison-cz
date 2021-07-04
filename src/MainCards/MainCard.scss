@@ -1,0 +1,33 @@
+.mainCard {
+    border: 1px solid rgba(128, 128, 128, 0.712);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    width: 350px;
+    margin: 0 0.5em;
+
+    .mainImg {
+        width: 100%;
+
+    }
+
+    .mainCardTitle {
+        text-align: left;
+        font-size: 0.8em;   
+    }
+
+    .mainCardInfo {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 2.5em;
+        
+        h5 {
+            font-size: 0.8em;
+        }
+
+        p {
+            font-size: 0.8em;
+        }
+    }
+}
