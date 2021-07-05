@@ -1,20 +1,23 @@
-
+/* all MainCards will have same styling */
 import "./MainCard.scss";
 
 function MainCardA(props) {
-  const { images, name, prize_czk, locality, building_area, land_area } = props.estateA;
-
+  /* destructuring object recived by props */
+  const { images, name, prize_czk, locality, building_area, land_area } =
+    props.estateA;
+  /* lifting state up */
   props.setPrizeA(prize_czk);
   props.setFloorAreaA(building_area);
   props.setLandAreaA(land_area);
 
-
   return (
+    /* displaying data recived by props */
     <div className="mainCard">
       <img src={images[0]} alt={name} className="mainImg" />
       <p className="mainCardTitle">{name}</p>
       <div
         className="mainCardInfo"
+        /* bg color changing based on comparison of values */
         style={{ backgroundColor: props.backgroundColorPrizeA }}
       >
         <h5>Price</h5>
