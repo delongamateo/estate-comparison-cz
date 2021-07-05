@@ -17,6 +17,10 @@ function App() {
   const [landAreaA, setLandAreaA] = useState(0);
   const [landAreaB, setLandAreaB] = useState(0);
 
+  console.log(landAreaA)
+  console.log(landAreaB);
+
+
   return (
     <div className="App">
       <h1 className="title">Estate Comparison</h1>
@@ -27,28 +31,28 @@ function App() {
           <ShellCard />
         ) : (
           <MainCardA
+            /* logic for comparing values of components and changing bg color */
+            backgroundColorPrizeA={prizeA > prizeB ? "red" : "green"}
+            backgroundColorFloorA={floorAreaA < floorAreaB ? "red" : "green"}
+            backgroundColorLandA={landAreaA < landAreaB ? "red" : "green"}
             /* passing needed props */
             estateA={estateA}
             setPrizeA={setprizeA}
             setFloorAreaA={setFloorAreaA}
             setLandAreaA={setLandAreaA}
-            /* logic for comparing values of components and changing bg color */
-            backgroundColorPrizeA={prizeA > prizeB ? "red" : "green"}
-            backgroundColorFloorA={floorAreaA < floorAreaB ? "red" : "green"}
-            backgroundColorLandA={landAreaA < landAreaB ? "red" : "green"}
           />
         )}
         {estateB === null ? (
           <ShellCard />
         ) : (
           <MainCardB
+            backgroundColorPrizeB={prizeA < prizeB ? "red" : "green"}
+            backgroundColorFloorB={floorAreaA > floorAreaB ? "red" : "green"}
+            backgroundColorLandB={landAreaA > landAreaB ? "red" : "green"}
             estateB={estateB}
             setPrizeB={setprizeB}
             setFloorAreaB={setFloorAreaB}
             setLandAreaB={setLandAreaB}
-            backgroundColorPrizeB={prizeA < prizeB ? "red" : "green"}
-            backgroundColorFloorB={floorAreaA > floorAreaB ? "red" : "green"}
-            backgroundColorLandB={landAreaA > landAreaB ? "red" : "green"}
           />
         )}
       </div>
