@@ -37,9 +37,9 @@ function App() {
             setFloorAreaA={setFloorAreaA}
             setLandAreaA={setLandAreaA}
             /* logic for comparing values of components and changing bg color */
-            backgroundColorPrizeA={prizeA > prizeB ? "red" : "green"}
-            backgroundColorFloorA={floorAreaA < floorAreaB ? "red" : "green"}
-            backgroundColorLandA={landAreaA < landAreaB ? "red" : "green"}
+            backgroundColorPrizeA={+prizeA > +prizeB ? "red" : "green"}
+            backgroundColorFloorA={+floorAreaA < +floorAreaB ? "red" : "green"}
+            backgroundColorLandA={+landAreaA < +landAreaB ? "red" : "green"}
           />
         )}
         {estateB === null ? (
@@ -50,9 +50,9 @@ function App() {
             setPrizeB={setprizeB}
             setFloorAreaB={setFloorAreaB}
             setLandAreaB={setLandAreaB}
-            backgroundColorPrizeB={prizeA < prizeB ? "red" : "green"}
-            backgroundColorFloorB={floorAreaA > floorAreaB ? "red" : "green"}
-            backgroundColorLandB={landAreaA > landAreaB ? "red" : "green"}
+            backgroundColorPrizeB={+prizeA < +prizeB ? "red" : "green"}
+            backgroundColorFloorB={+floorAreaA > +floorAreaB ? "red" : "green"}
+            backgroundColorLandB={+landAreaA > +landAreaB ? "red" : "green"}
           />
         )}
       </div>
