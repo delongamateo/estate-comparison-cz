@@ -4,9 +4,7 @@ import "./MainCard.scss";
 function MainCardB(props) {
   const { images, name, prize_czk, locality, building_area, land_area } = props.estateB;
 
-  props.setPrizeB(prize_czk);
-  props.setFloorAreaB(building_area);
-  props.setLandAreaB(land_area);
+
 
   return (
     <div className="mainCard">

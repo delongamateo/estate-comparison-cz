@@ -9,17 +9,9 @@ function App() {
   /* saving selected estates data */
   const [estateA, setEstateA] = useState(null);
   const [estateB, setEstateB] = useState(null);
-  /* lifted up states  for comparison*/
-  const [prizeA, setprizeA] = useState(0);
-  const [prizeB, setprizeB] = useState(0);
-  const [floorAreaA, setFloorAreaA] = useState(0);
-  const [floorAreaB, setFloorAreaB] = useState(0);
-  const [landAreaA, setLandAreaA] = useState(0);
-  const [landAreaB, setLandAreaB] = useState(0);
-
-  console.log(landAreaA)
-  console.log(landAreaB);
-
+ 
+  console.log(estateA);
+  console.log(estateB);
 
   return (
     <div className="App">
@@ -33,13 +25,18 @@ function App() {
           <MainCardA
             /* passing needed props */
             estateA={estateA}
-            setPrizeA={setprizeA}
-            setFloorAreaA={setFloorAreaA}
-            setLandAreaA={setLandAreaA}
             /* logic for comparing values of components and changing bg color */
-            backgroundColorPrizeA={+prizeA > +prizeB ? "red" : "green"}
-            backgroundColorFloorA={+floorAreaA < +floorAreaB ? "red" : "green"}
-            backgroundColorLandA={+landAreaA < +landAreaB ? "red" : "green"}
+            backgroundColorPrizeA={
+              +estateA?.prize_czk > +estateB?.prize_czk ? "red" : "green"
+            }
+            backgroundColorFloorA={
+              +estateA?.building_area < +estateB?.building_area
+                ? "red"
+                : "green"
+            }
+            backgroundColorLandA={
+              +estateA?.land_area < +estateB?.land_area ? "red" : "green"
+            }
           />
         )}
         {estateB === null ? (
@@ -47,12 +44,17 @@ function App() {
         ) : (
           <MainCardB
             estateB={estateB}
-            setPrizeB={setprizeB}
-            setFloorAreaB={setFloorAreaB}
-            setLandAreaB={setLandAreaB}
-            backgroundColorPrizeB={+prizeA < +prizeB ? "red" : "green"}
-            backgroundColorFloorB={+floorAreaA > +floorAreaB ? "red" : "green"}
-            backgroundColorLandB={+landAreaA > +landAreaB ? "red" : "green"}
+            backgroundColorPrizeB={
+              +estateA?.prize_czk < +estateB?.prize_czk ? "red" : "green"
+            }
+            backgroundColorFloorB={
+              +estateA?.building_area > +estateB?.building_area
+                ? "red"
+                : "green"
+            }
+            backgroundColorLandB={
+              +estateA?.land_area > +estateB?.land_area ? "red" : "green"
+            }
           />
         )}
       </div>

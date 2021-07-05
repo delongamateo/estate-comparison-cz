@@ -5,10 +5,7 @@ function MainCardA(props) {
   /* destructuring object recived by props */
   const { images, name, prize_czk, locality, building_area, land_area } =
     props.estateA;
-  /* lifting state up */
-  props.setPrizeA(prize_czk);
-  props.setFloorAreaA(building_area);
-  props.setLandAreaA(land_area);
+  
 
   return (
     /* displaying data recived by props */
