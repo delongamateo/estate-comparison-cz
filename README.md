@@ -1,4 +1,4 @@
-In this project I learned:
+In this project I learned:<br />
 -Fetching data from API<br />
 -Displaying data<br />
 -Lifting state up<br />
